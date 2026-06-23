@@ -1,4 +1,31 @@
 organization:
-  name: "Trut, z. s."
-  motto: "Literatura nás baví."
-  purpose: "Pořádání kulturních, vzdělávacích a společenských akcí a podpora rozvoje literární kultury v regionu."
+name: "Trut, z. s."
+short_name: "Trut"
+
+motto: "Literatura nás baví."
+
+purpose: >
+Pořádání kulturních, vzdělávacích a společenských akcí
+a podpora rozvoje literární kultury v regionu.
+
+founded: "1. dubna 2026"
+
+legal_form: "Spolek"
+
+registration:
+file: "L 15408"
+court: "Krajský soud v Hradci Králové"
+
+ico: "24614858"
+
+hero:
+title: "Trut"
+subtitle: "Literatura nás baví."
+button_text: "Nejbližší akce"
+
+colors:
+primary: "#6B1F1F"
+primary_dark: "#4E1515"
+accent: "#D4A373"
+background: "#F8F5F0"
+text: "#2B2B2B"

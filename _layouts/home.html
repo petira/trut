@@ -1,0 +1,212 @@
+---
+layout: default
+---
+
+<header id="top" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-logo">
+            {{ site.data.site.hero.title }}
+        </div>
+
+        <p class="hero-subtitle">
+            {{ site.data.site.hero.subtitle }}
+        </p>
+
+        <a href="#events" class="button-primary">
+            {{ site.data.site.hero.button_text }}
+        </a>
+
+    </div>
+
+</header>
+
+
+<nav class="main-nav">
+
+    <div class="container">
+
+        <div class="brand">
+            {{ site.data.site.organization.short_name }}
+        </div>
+
+        <ul>
+
+            {% for item in site.data.navigation %}
+
+            <li>
+                <a href="{{ item.url }}">
+                    {{ item.title }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <h2>O spolku</h2>
+
+        <p>
+            {{ site.data.site.organization.purpose }}
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="activities" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Činnost spolku</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                Veřejná čtení, autorská setkání, besedy a literární soutěže
+            </div>
+
+            <div class="card">
+                Spolupráce s knihovnami, muzei, školami a kulturními institucemi
+            </div>
+
+            <div class="card">
+                Podpora a vydávání literárních publikací
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="events" class="section">
+
+    <div class="container">
+
+        <h2>Nejbližší akce</h2>
+
+        {% assign planned_events = site.events | sort: "date" %}
+
+        {% for event in planned_events limit:3 %}
+
+        <article class="event-card">
+
+            <h3>
+                <a href="{{ event.url | relative_url }}">
+                    {{ event.title }}
+                </a>
+            </h3>
+
+            <p>
+                {{ event.date | date: "%d.%m.%Y" }}
+            </p>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<section id="projects" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Projekty</h2>
+
+        <div class="cards">
+
+            {% for project in site.projects %}
+
+            <div class="card">
+
+                <h3>{{ project.title }}</h3>
+
+                {{ project.excerpt }}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="team" class="section">
+
+    <div class="container">
+
+        <h2>Kontaktní osoby</h2>
+
+        <div class="team-grid">
+
+            {% for member in site.data.team %}
+
+            <div class="team-member">
+
+                <img
+                    src="{{ '/assets/img/team/' | append: member.image | relative_url }}"
+                    alt="{{ member.name }}"
+                >
+
+                <h3>{{ member.name }}</h3>
+
+                <p>{{ member.role }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Kontakt</h2>
+
+        <p>
+            <strong>E-mail:</strong>
+            {{ site.data.contacts.email }}
+        </p>
+
+        <p>
+            <strong>Web:</strong>
+            {{ site.data.contacts.website }}
+        </p>
+
+        <p>
+            <strong>Adresa:</strong>
+            {{ site.data.contacts.address.street }},
+            {{ site.data.contacts.address.zip }}
+            {{ site.data.contacts.address.city }}
+        </p>
+
+    </div>
+
+</section>

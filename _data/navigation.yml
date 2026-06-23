@@ -1,20 +1,20 @@
-* title: "Domů"
+- title: "Domů"
   url: "#top"
 
-* title: "O spolku"
+- title: "O spolku"
   url: "#about"
 
-* title: "Činnost"
+- title: "Činnost"
   url: "#activities"
 
-* title: "Akce"
+- title: "Akce"
   url: "#events"
 
-* title: "Projekty"
+- title: "Projekty"
   url: "#projects"
 
-* title: "Kontaktní osoby"
+- title: "Kontaktní osoby"
   url: "#team"
 
-* title: "Kontakt"
+- title: "Kontakt"
   url: "#contact"

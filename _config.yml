@@ -1,0 +1,16 @@
+title: "Trut, z. s."
+description: "Literatura nás baví."
+lang: cs
+timezone: Europe/Prague
+
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event

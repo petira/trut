@@ -1,4 +1,14 @@
 email: "spolek@trut.cz"
 website: "https://trut.cz"
-address: "Na Struze 30, Dolní Předměstí, 541 01 Trutnov"
-ico: "24614858"
+
+address:
+  street: "Na Struze 30"
+  city: "Trutnov"
+  zip: "541 01"
+
+map:
+  lat: 50.5626
+  lng: 15.9120
+
+formspree:
+  endpoint: ""

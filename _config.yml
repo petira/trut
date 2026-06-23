@@ -1,16 +1,44 @@
 title: "Trut, z. s."
 description: "Literatura nás baví."
 lang: cs
+locale: cs_CZ
 timezone: Europe/Prague
 
+url: "https://petira.github.io"
+baseurl: "/trut"
+
+markdown: kramdown
+
 collections:
-  events:
-    output: true
-    permalink: /events/:name/
+events:
+output: true
+permalink: /events/:name/
+
+projects:
+output: true
+permalink: /projects/:name/
 
 defaults:
-  - scope:
-      path: ""
-      type: events
-    values:
-      layout: event
+
+* scope:
+  path: ""
+  type: events
+  values:
+  layout: event
+
+* scope:
+  path: ""
+  type: projects
+  values:
+  layout: project
+
+plugins:
+
+* jekyll-feed
+* jekyll-seo-tag
+
+exclude:
+
+* README.md
+* Gemfile
+* Gemfile.lock

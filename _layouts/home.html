@@ -136,11 +136,15 @@ layout: default
             {% for project in site.projects %}
 
             <div class="card">
-
-                <h3>{{ project.title }}</h3>
-
+            
+                <h3>
+                    <a href="{{ project.url | relative_url }}">
+                        {{ project.title }}
+                    </a>
+                </h3>
+            
                 {{ project.excerpt }}
-
+            
             </div>
 
             {% endfor %}

@@ -1,20 +1,25 @@
 - title: "Domů"
-  url: "#top"
+  home_url: "#top"
+  page_url: /
 
-- title: "Spolek"
-  url: "#about"
+- title: Spolek
+  home_url: "#about"
+  page_url: "/spolek/"
 
-- title: "Činnost"
-  url: "#activities"
+- title: Činnost
+  home_url: "#activities"
 
-- title: "Akce"
-  url: "#events"
+- title: Akce
+  home_url: "#events"
+  page_url: "/akce/"
 
-- title: "Projekty"
-  url: "#projects"
+- title: Projekty
+  home_url: "#projects"
+  page_url: "/projekty/"
 
-- title: "Lidé"
-  url: "#team"
+- title: Lidé
+  home_url: "#team"
 
-- title: "Kontakt"
-  url: "#contact"
+- title: Kontakt
+  home_url: "#contact"
+  page_url: "/kontakt/"

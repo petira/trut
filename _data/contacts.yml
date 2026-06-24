@@ -11,4 +11,4 @@ map:
   lng: 15.9180419
 
 formspree:
-  endpoint: ""
+  endpoint: "https://formspree.io/f/xqevepwd"

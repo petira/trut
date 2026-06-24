@@ -10,25 +10,31 @@
 
         <ul>
 
-            {% if page.url == "/" %}
+            {% for item in site.data.navigation %}
 
-                <li><a href="#about">O spolku</a></li>
-                <li><a href="#activities">Činnost</a></li>
-                <li><a href="#events">Akce</a></li>
-                <li><a href="#projects">Projekty</a></li>
-                <li><a href="#team">Lidé</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#map">Mapa</a></li>
+                <li>
 
-            {% else %}
+                    {% if page.url == "/" %}
 
-                <li><a href="{{ '/' | relative_url }}">Domů</a></li>
-                <li><a href="{{ '/spolek/' | relative_url }}">Spolek</a></li>
-                <li><a href="{{ '/akce/' | relative_url }}">Akce</a></li>
-                <li><a href="{{ '/projekty/' | relative_url }}">Projekty</a></li>
-                <li><a href="{{ '/kontakt/' | relative_url }}">Kontakt</a></li>
+                        <a href="{{ item.home_url }}">
+                            {{ item.title }}
+                        </a>
 
-            {% endif %}
+                    {% else %}
+
+                        {% if item.page_url %}
+
+                            <a href="{{ item.page_url | relative_url }}">
+                                {{ item.title }}
+                            </a>
+
+                        {% endif %}
+
+                    {% endif %}
+
+                </li>
+
+            {% endfor %}
 
         </ul>
 

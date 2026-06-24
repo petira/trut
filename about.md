@@ -1,7 +1,7 @@
 ---
 layout: page
-title: O spolku
-permalink: /o-spolku/
+title: Spolek
+permalink: /spolek/
 ---
 
 ## Účel spolku

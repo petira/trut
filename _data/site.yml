@@ -18,6 +18,10 @@ registration:
 
 ico: "24614858"
 
+location:
+  latitude: 50.5622539
+  longitude: 15.9180419
+
 hero:
   title: "Trut"
   subtitle: "Literatura nás baví."

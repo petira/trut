@@ -323,7 +323,7 @@ h2 {
 
 }
 
-/* SECTION LINK */
+/* SECTION LINK EVENTS & PROJECTS */
 
 .section-link {
     text-align: center;
@@ -333,4 +333,11 @@ h2 {
 
 .section-link a {
     font-weight: 600;
+}
+
+/* MAP LINK */
+
+.map-link {
+    text-align: center;
+    margin-top: 15px;
 }

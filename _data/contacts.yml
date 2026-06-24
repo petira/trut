@@ -7,8 +7,8 @@ address:
   zip: "541 01"
 
 map:
-  lat: 50.5626
-  lng: 15.9120
+  lat: 50.5622539
+  lng: 15.9180419
 
 formspree:
   endpoint: ""

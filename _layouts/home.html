@@ -98,25 +98,65 @@ layout: default
 
     <div class="container">
 
-        <h2>Nejbližší akce</h2>
+        <h2>Akce</h2>
 
-        {% assign planned_events = site.events | sort: "date" %}
+        <h3>Nejbližší akce</h3>
 
-        {% for event in planned_events limit:3 %}
+        {% assign upcoming = site.events | sort: "date" %}
 
-        <article class="event-card">
+        {% for event in upcoming %}
 
-            <h3>
-                <a href="{{ event.url | relative_url }}">
-                    {{ event.title }}
-                </a>
-            </h3>
+            {% assign event_time = event.date | date: "%s" %}
+            {% assign now_time = site.time | date: "%s" %}
 
-            <p>
-                {{ event.date | date: "%d.%m.%Y" }}
-            </p>
+            {% if event_time >= now_time %}
 
-        </article>
+            <article class="event-card">
+
+                <h3>
+                    <a href="{{ event.url | relative_url }}">
+                        {{ event.title }}
+                    </a>
+                </h3>
+
+                <p>
+                    {{ event.date | date: "%d.%m.%Y" }}
+                </p>
+
+            </article>
+
+            {% endif %}
+
+        {% endfor %}
+
+        <h3 style="margin-top:60px;">
+            Proběhlé akce
+        </h3>
+
+        {% assign past = site.events | sort: "date" | reverse %}
+
+        {% for event in past %}
+
+            {% assign event_time = event.date | date: "%s" %}
+            {% assign now_time = site.time | date: "%s" %}
+
+            {% if event_time < now_time %}
+
+            <article class="event-card">
+
+                <h3>
+                    <a href="{{ event.url | relative_url }}">
+                        {{ event.title }}
+                    </a>
+                </h3>
+
+                <p>
+                    {{ event.date | date: "%d.%m.%Y" }}
+                </p>
+
+            </article>
+
+            {% endif %}
 
         {% endfor %}
 

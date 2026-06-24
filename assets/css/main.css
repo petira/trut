@@ -322,3 +322,15 @@ h2 {
     }
 
 }
+
+/* SECTION LINK */
+
+.section-link {
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 40px;
+}
+
+.section-link a {
+    font-weight: 600;
+}

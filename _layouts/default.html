@@ -14,6 +14,13 @@
 
     <meta name="description" content="{{ site.description }}">
 
+    <meta property="og:title" content="{{ site.data.site.organization.name }}">
+    <meta property="og:description" content="{{ site.data.site.organization.motto }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    
+    <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 

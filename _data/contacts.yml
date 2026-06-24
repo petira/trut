@@ -6,6 +6,12 @@ address:
   city: "Trutnov"
   zip: "541 01"
 
+organization:
+  ico: 24614858
+  founded: 1. dubna 2026
+  registry: L 15408 vedená u Krajského soudu v Hradci Králové
+  legal_form: Spolek
+
 map:
   lat: 50.5622539
   lng: 15.9180419

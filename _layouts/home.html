@@ -263,26 +263,7 @@ layout: default
 
                 <h3>Kontaktní údaje</h3>
 
-                <p>
-                    <strong>E-mail:</strong><br>
-                    <a href="mailto:{{ site.data.contacts.email }}">
-                        {{ site.data.contacts.email }}
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Web:</strong><br>
-                    <a href="{{ site.data.contacts.website }}">
-                        {{ site.data.contacts.website }}
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Adresa:</strong><br>
-                    {{ site.data.contacts.address.street }}<br>
-                    {{ site.data.contacts.address.zip }}
-                    {{ site.data.contacts.address.city }}
-                </p>
+                {% include contact-details.html %}
 
             </div>
 

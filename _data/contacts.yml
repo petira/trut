@@ -12,9 +12,9 @@ organization:
   registry: L 15408 vedená u Krajského soudu v Hradci Králové
   legal_form: Spolek
 
-map:
-  lat: 50.5622539
-  lng: 15.9180419
+location:
+  latitude: 50.5622539
+  longitude: 15.9180419
 
 formspree:
   endpoint: "https://formspree.io/f/xqevepwd"

@@ -177,6 +177,12 @@ layout: default
 
         <h2>Projekty</h2>
 
+        <p class="section-link">
+            <a href="{{ '/projekty/' | relative_url }}">
+                Zobrazit všechny projekty →
+            </a>
+        </p>
+
         <div class="cards">
 
             {% for project in site.projects %}
@@ -226,30 +232,6 @@ layout: default
             </div>
 
             {% endfor %}
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="map" class="section">
-
-    <div class="container">
-
-        <h2>Kde nás najdete</h2>
-
-        <div class="map-wrapper">
-
-            <iframe
-                width="100%"
-                height="450"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=15.9000%2C50.5550%2C15.9250%2C50.5700&layer=mapnik&marker=50.5626%2C15.9120">
-            </iframe>
 
         </div>
 
@@ -311,6 +293,30 @@ layout: default
                 </form>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="map" class="section">
+
+    <div class="container">
+
+        <h2>Kde nás najdete</h2>
+
+        <div class="map-wrapper">
+
+            <iframe
+                width="100%"
+                height="450"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.9000%2C50.5550%2C15.9250%2C50.5700&layer=mapnik&marker=50.5626%2C15.9120">
+            </iframe>
 
         </div>
 

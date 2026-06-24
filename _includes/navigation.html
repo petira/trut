@@ -12,27 +12,31 @@
 
             {% for item in site.data.navigation %}
 
-                <li>
+                {% if page.url == "/" %}
 
-                    {% if page.url == "/" %}
+                    {% if item.home_url %}
 
-                        <a href="{{ item.home_url }}">
-                            {{ item.title }}
-                        </a>
-
-                    {% else %}
-
-                        {% if item.page_url %}
-
-                            <a href="{{ item.page_url | relative_url }}">
+                        <li>
+                            <a href="{{ item.home_url }}">
                                 {{ item.title }}
                             </a>
-
-                        {% endif %}
+                        </li>
 
                     {% endif %}
 
-                </li>
+                {% else %}
+
+                    {% if item.page_url %}
+
+                        <li>
+                            <a href="{{ item.page_url | relative_url }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+
+                    {% endif %}
+
+                {% endif %}
 
             {% endfor %}
 

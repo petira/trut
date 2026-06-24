@@ -14,10 +14,10 @@ future: true
 collections:
   events:
     output: true
-    permalink: /events/:name/
+    permalink: /akce/:name/
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projekty/:name/
 
 defaults:
   - scope:

@@ -8,7 +8,57 @@ layout: default
 
         <h1>{{ page.title }}</h1>
 
-        {{ content }}
+        {% if page.permalink == "/akce/" %}
+        
+            {% assign events = site.events | sort: "date" | reverse %}
+        
+            {% for event in events %}
+        
+                <article class="event-card">
+        
+                    <h3>
+                        <a href="{{ event.url | relative_url }}">
+                            {{ event.title }}
+                        </a>
+                    </h3>
+        
+                    <p>
+                        {{ event.date | date: "%d.%m.%Y" }}
+                    </p>
+        
+                </article>
+        
+            {% endfor %}
+        
+        {% elsif page.permalink == "/projekty/" %}
+        
+            {% assign projects = site.projects %}
+        
+            <div class="cards">
+        
+                {% for project in projects %}
+        
+                <div class="card">
+        
+                    <h3>
+                        <a href="{{ project.url | relative_url }}">
+                            {{ project.title }}
+                        </a>
+                    </h3>
+        
+                    {{ project.content | strip_html | truncate: 140 }}
+        
+                </div>
+        
+                {% endfor %}
+        
+            </div>
+        
+        {% else %}
+        
+            {{ content }}
+        
+        {% endif %}
 
     </div>
 

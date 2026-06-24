@@ -9,6 +9,8 @@ baseurl: "/trut"
 
 markdown: kramdown
 
+future: true
+
 collections:
   events:
     output: true

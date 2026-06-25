@@ -109,10 +109,9 @@ h2 {
 
 .hero-logo-image {
     width: 240px;
-    max-width: 85vw;
+    max-width: 80vw;
     height: auto;
     color: white;
-    filter: invert(1);
 }
 
 .hero-logo-text {
@@ -132,7 +131,7 @@ h2 {
 }
 
 .hero-logo-svg {
-    width: 320px;
+    width: 240px;
     max-width: 80vw;
     color: white;
     margin: 0 auto 20px auto;

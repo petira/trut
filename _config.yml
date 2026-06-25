@@ -7,6 +7,8 @@ timezone: Europe/Prague
 url: "https://petira.github.io"
 baseurl: "/trut"
 
+logo: /assets/img/logo/trut_logo.svg
+
 markdown: kramdown
 
 future: true

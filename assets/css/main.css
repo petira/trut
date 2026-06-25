@@ -111,7 +111,7 @@ h2 {
     width: 240px;
     max-width: 85vw;
     height: auto;
-    color: white;
+    color: white !important;
 }
 
 .hero-logo-text {

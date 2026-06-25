@@ -127,6 +127,9 @@ h2 {
     .hero-logo-image {
         width: 120px;
     }
+    .hero-logo-svg {
+        width: 120px;
+    }
     .hero-logo-text {
         font-size: 3rem;
     }
@@ -136,7 +139,7 @@ h2 {
     width: 240px;
     max-width: 80vw;
     color: white;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 0 auto;
 }
 
 .hero-logo-svg svg {

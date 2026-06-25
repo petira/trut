@@ -1,5 +1,5 @@
 ---
-layout: events
+layout: page
 title: Akce
 permalink: /akce/
 ---

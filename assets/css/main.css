@@ -131,6 +131,19 @@ h2 {
     }
 }
 
+.hero-logo-svg {
+    width: 320px;
+    max-width: 80vw;
+    color: white;
+    margin: 0 auto 20px auto;
+}
+
+.hero-logo-svg svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .hero-subtitle {
     font-size: 1.4rem;
     margin-bottom: 40px;

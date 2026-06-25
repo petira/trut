@@ -1,4 +1,5 @@
 ---
+layout: project
 title: "Literární večery"
 ---
 

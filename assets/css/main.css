@@ -100,12 +100,32 @@ h2 {
 }
 
 .hero-logo {
-    font-family: "New Rocker", cursive;
-
-    font-size: 6rem;
-    line-height: 1;
-
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-logo-image {
+    width: 420px;
+    max-width: 85vw;
+    height: auto;
+    color: white;
+}
+
+.hero-logo-text {
+    font-family: var(--font-logo);
+    font-size: 6rem;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-logo-image {
+        width: 260px;
+    }
+    .hero-logo-text {
+        font-size: 3rem;
+    }
 }
 
 .hero-subtitle {

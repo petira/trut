@@ -9,7 +9,23 @@ layout: default
     <div class="hero-content">
 
         <div class="hero-logo">
-            {{ site.data.site.hero.title }}
+        
+            {% if site.logo %}
+        
+                <img
+                    src="{{ site.logo | relative_url }}"
+                    alt="{{ site.data.site.organization.name }}"
+                    class="hero-logo-image"
+                >
+        
+            {% else %}
+        
+                <span class="hero-logo-text">
+                    {{ site.data.site.hero.title }}
+                </span>
+        
+            {% endif %}
+        
         </div>
 
         <p class="hero-subtitle">

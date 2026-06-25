@@ -111,7 +111,8 @@ h2 {
     width: 240px;
     max-width: 85vw;
     height: auto;
-    color: white !important;
+    color: white;
+    filter: invert(1);
 }
 
 .hero-logo-text {

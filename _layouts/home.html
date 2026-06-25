@@ -12,11 +12,9 @@ layout: default
         
             {% if site.logo %}
         
-                <img
-                    src="{{ site.logo | relative_url }}"
-                    alt="{{ site.data.site.organization.name }}"
-                    class="hero-logo-image"
-                >
+                <div class="hero-logo-svg">
+                    {% include trut_logo.svg %}
+                </div>
         
             {% else %}
         

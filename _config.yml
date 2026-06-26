@@ -25,13 +25,13 @@ defaults:
   - scope:
       path: ""
       type: events
-      values:
+    values:
       layout: event
 
   - scope:
       path: ""
       type: projects
-      values:
+    values:
       layout: project
 
 plugins:

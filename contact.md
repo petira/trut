@@ -6,7 +6,7 @@ permalink: /kontakt/
 
 ## Kontaktní údaje
 
-{% include contact-details.html %}
+{% include contact.html %}
 
 ## Statutární orgán
 

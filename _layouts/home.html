@@ -246,7 +246,7 @@ layout: default
                 <h3>Napište nám</h3>
 
                 <form
-                    action="{{ site.data.contacts.formspree.endpoint }}"
+                    action="{{ site.data.contact.formspree.endpoint }}"
                     method="POST"
                     class="contact-form"
                 >
@@ -294,8 +294,8 @@ layout: default
 
         <div class="map-wrapper">
 
-            {% assign lat = site.data.contacts.location.latitude %}
-            {% assign lon = site.data.contacts.location.longitude %}
+            {% assign lat = site.data.contact.location.latitude %}
+            {% assign lon = site.data.contact.location.longitude %}
             
             {% assign min_lat = lat | minus: 0.01 %}
             {% assign max_lat = lat | plus: 0.01 %}

@@ -19,7 +19,7 @@ layout: default
             {% else %}
         
                 <span class="hero-logo-text">
-                    {{ site.data.site.hero.title }}
+                    {{ site.data.organization.hero.title }}
                 </span>
         
             {% endif %}
@@ -27,11 +27,11 @@ layout: default
         </div>
 
         <p class="hero-subtitle">
-            {{ site.data.site.hero.subtitle }}
+            {{ site.data.organization.hero.subtitle }}
         </p>
 
         <a href="#events" class="button-primary">
-            {{ site.data.site.hero.button_text }}
+            {{ site.data.organization.hero.button_text }}
         </a>
 
     </div>
@@ -45,7 +45,7 @@ layout: default
         <h2>Spolek</h2>
 
         <p>
-            {{ site.data.site.organization.purpose }}
+            {{ site.data.organization.purpose }}
         </p>
 
     </div>
@@ -246,7 +246,7 @@ layout: default
                 <h3>Napište nám</h3>
 
                 <form
-                    action="{{ site.data.contact.formspree.endpoint }}"
+                    action="{{ site.formspree.endpoint }}"
                     method="POST"
                     class="contact-form"
                 >
@@ -294,8 +294,8 @@ layout: default
 
         <div class="map-wrapper">
 
-            {% assign lat = site.data.contact.location.latitude %}
-            {% assign lon = site.data.contact.location.longitude %}
+            {% assign lat = site.data.organization.map.lat %}
+            {% assign lon = site.data.organization.map.lon %}
             
             {% assign min_lat = lat | minus: 0.01 %}
             {% assign max_lat = lat | plus: 0.01 %}

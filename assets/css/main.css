@@ -191,6 +191,8 @@ h2 {
     align-items: center;
 
     min-height: 70px;
+
+    position: relative;
 }
 
 .brand {
@@ -277,6 +279,8 @@ h2 {
         font-size: 4rem;
     }
 
+/* ==============
+
     .main-nav .container {
         flex-direction: column;
         padding: 16px;
@@ -287,6 +291,8 @@ h2 {
         justify-content: center;
         margin-top: 12px;
     }
+
+ ============== */
 
 }
 
@@ -427,6 +433,10 @@ section[id] {
         top: 70px;
         left: 0;
         right: 0;
+
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1001;
 
         background: white;
 

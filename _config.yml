@@ -1,11 +1,11 @@
-title: "Trut, z. s."
-description: "Literární spolek z Trutnova pořádající autorská čtení, besedy a kulturní akce."
+title: Trut, z. s.
+description: Literární spolek z Trutnova pořádající autorská čtení, besedy a kulturní akce.
 lang: cs
 locale: cs_CZ
 timezone: Europe/Prague
 
-url: "https://petira.github.io"
-baseurl: "/trut"
+url: https://petira.github.io
+baseurl: /trut
 permalink: pretty
 
 author:
@@ -14,9 +14,12 @@ author:
 social:
   name: Trut
   links:
-    - https://www.facebook.com/trut.cz/
+    - https://www.facebook.com/trut.cz
 
 logo: /assets/img/logo/trut_logo.svg
+
+formspree:
+  endpoint: https://formspree.io/f/xqevepwd
 
 markdown: kramdown
 

@@ -1,11 +1,20 @@
 title: "Trut, z. s."
-description: "Literatura nás baví."
+description: "Literární spolek z Trutnova pořádající autorská čtení, besedy a kulturní akce."
 lang: cs
 locale: cs_CZ
 timezone: Europe/Prague
 
 url: "https://petira.github.io"
 baseurl: "/trut"
+permalink: pretty
+
+author:
+  name: Trut
+
+social:
+  name: Trut
+  links:
+    - https://www.facebook.com/trut.cz/
 
 logo: true
 

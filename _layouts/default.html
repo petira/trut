@@ -6,16 +6,16 @@
 
     <title>
         {% if page.title %}
-            {{ page.title }} | {{ site.data.site.organization.name }}
+            {{ page.title }} | {{ site.data.organization.name }}
         {% else %}
-            {{ site.data.site.organization.name }}
+            {{ site.data.organization.name }}
         {% endif %}
     </title>
 
     <meta name="description" content="{{ site.description }}">
 
-    <meta property="og:title" content="{{ site.data.site.organization.name }}">
-    <meta property="og:description" content="{{ site.data.site.organization.motto }}">
+    <meta property="og:title" content="{{ site.data.organization.name }}">
+    <meta property="og:description" content="{{ site.description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     

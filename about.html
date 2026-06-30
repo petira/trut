@@ -1,0 +1,41 @@
+---
+layout: page
+title: Spolek
+permalink: /spolek/
+---
+<h2>Účel spolku</h2>
+
+<p>{{ site.data.organization.purpose }}</p>
+
+<h2>Činnost spolku</h2>
+
+<div class="cards">
+
+    {% for activity in site.data.organization.activities %}
+
+        <div class="card">
+            {{ activity }}
+        </div>
+
+    {% endfor %}
+
+</div>
+
+<h2>Základní údaje</h2>
+
+<p><strong>Název:</strong> {{ site.data.organization.name }}</p>
+
+<p><strong>Právní forma:</strong> {{ site.data.organization.legal_form }}</p>
+
+<p><strong>Datum vzniku:</strong> {{ site.data.organization.founded }}</p>
+
+<p><strong>IČ:</strong> {{ site.data.organization.id }}</p>
+
+<p><strong>Spisová značka:</strong> {{ site.data.organization.registry }}</p>
+
+<p>
+<strong>Sídlo:</strong>
+{{ site.data.organization.address.street }},
+{{ site.data.organization.address.zip }}
+{{ site.data.organization.address.city }}
+</p>

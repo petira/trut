@@ -382,6 +382,12 @@ h2 {
     margin-top: 15px;
 }
 
+/* ANCHOR */
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
 /* ==========================================
    MOBILE NAVIGATION
 ========================================== */

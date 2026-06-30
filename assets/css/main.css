@@ -478,3 +478,14 @@ section[id] {
     }
 
 }
+
+/* PAGE CONTENT */
+
+.page-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page-content > :first-child {
+    margin-top: 1rem;
+}

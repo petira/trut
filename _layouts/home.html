@@ -61,17 +61,13 @@ layout: default
 
         <div class="cards">
 
-            <div class="card">
-                Veřejná čtení, autorská setkání, besedy a literární soutěže
-            </div>
+            {% for activity in site.data.organization.activities %}
 
-            <div class="card">
-                Spolupráce s knihovnami, muzei, školami a kulturními institucemi
-            </div>
+                <div class="card">
+                    {{ activity }}
+                </div>
 
-            <div class="card">
-                Podpora a vydávání literárních publikací
-            </div>
+            {% endfor %}
 
         </div>
 

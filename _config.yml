@@ -16,7 +16,7 @@ social:
   links:
     - https://www.facebook.com/trut.cz/
 
-logo: true
+logo: /assets/img/logo/trut_logo.svg
 
 markdown: kramdown
 

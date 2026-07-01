@@ -464,7 +464,10 @@ section[id] {
 
         background: white;
 
+        margin: 0;
         padding: 20px;
+
+        list-style: none;
 
         flex-direction: column;
 
@@ -477,6 +480,18 @@ section[id] {
 
     .nav-menu.open {
         display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        display: block;
+    
+        padding: .75rem 0;
+    
+        width: 100%;
     }
 
 }

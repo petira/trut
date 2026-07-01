@@ -222,7 +222,7 @@ ol {
     font-size: 1.6rem;
 }
 
-.main-nav ul {
+.main-nav .nav-menu {
     display: flex;
     gap: 24px;
 
@@ -448,7 +448,7 @@ section[id] {
         display: block;
     }
 
-    .nav-menu {
+    .main-nav .nav-menu {
 
         display: none;
 
@@ -478,15 +478,15 @@ section[id] {
         box-shadow: 0 6px 20px rgba(0,0,0,.08);
     }
 
-    .nav-menu.open {
+    .main-nav .nav-menu.open {
         display: flex;
     }
 
-    .nav-menu li {
+    .main-nav .nav-menu li {
         width: 100%;
     }
     
-    .nav-menu a {
+    .main-nav .nav-menu a {
         display: block;
     
         padding: .75rem 0;

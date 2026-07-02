@@ -99,7 +99,7 @@ layout: default
 
             {% if event_time >= now_time %}
 
-            {% include card-event.html event=event %}
+                {% include card-event.html event=event %}
 
             {% endif %}
 
@@ -118,7 +118,7 @@ layout: default
 
             {% if event_time < now_time %}
 
-            {% include card-event.html event=event %}
+                {% include card-event.html event=event %}
 
             {% endif %}
 
@@ -145,10 +145,10 @@ layout: default
 
             {% for project in site.projects %}
 
-            {% include card-project.html
-                project=project
-                content=project.excerpt
-            %}
+                {% include card-project.html
+                    project=project
+                    content=project.excerpt
+                %}
 
             {% endfor %}
 

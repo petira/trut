@@ -99,19 +99,7 @@ layout: default
 
             {% if event_time >= now_time %}
 
-            <article class="event-card">
-
-                <h3>
-                    <a href="{{ event.url | relative_url }}">
-                        {{ event.title }}
-                    </a>
-                </h3>
-
-                <p>
-                    {{ event.date | date: "%d.%m.%Y" }}
-                </p>
-
-            </article>
+            {% include card-event.html event=event %}
 
             {% endif %}
 
@@ -130,19 +118,7 @@ layout: default
 
             {% if event_time < now_time %}
 
-            <article class="event-card">
-
-                <h3>
-                    <a href="{{ event.url | relative_url }}">
-                        {{ event.title }}
-                    </a>
-                </h3>
-
-                <p>
-                    {{ event.date | date: "%d.%m.%Y" }}
-                </p>
-
-            </article>
+            {% include card-event.html event=event %}
 
             {% endif %}
 
@@ -169,17 +145,10 @@ layout: default
 
             {% for project in site.projects %}
 
-            <div class="card">
-            
-                <h3>
-                    <a href="{{ project.url | relative_url }}">
-                        {{ project.title }}
-                    </a>
-                </h3>
-            
-                {{ project.excerpt }}
-            
-            </div>
+            {% include card-project.html
+                project=project
+                content=project.excerpt
+            %}
 
             {% endfor %}
 

@@ -1,0 +1,13 @@
+<article class="event-card">
+
+    <h3>
+        <a href="{{ include.event.url | relative_url }}">
+            {{ include.event.title }}
+        </a>
+    </h3>
+
+    <p>
+        {{ include.event.date | date: "%d.%m.%Y" }}
+    </p>
+
+</article>

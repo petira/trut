@@ -13,20 +13,8 @@ layout: default
             {% assign events = site.events | sort: "date" | reverse %}
         
             {% for event in events %}
-        
-                <article class="event-card">
-        
-                    <h3>
-                        <a href="{{ event.url | relative_url }}">
-                            {{ event.title }}
-                        </a>
-                    </h3>
-        
-                    <p>
-                        {{ event.date | date: "%d.%m.%Y" }}
-                    </p>
-        
-                </article>
+
+                {% include card-event.html event=event %}
         
             {% endfor %}
         
@@ -37,18 +25,11 @@ layout: default
             <div class="cards">
         
                 {% for project in projects %}
-        
-                <div class="card">
-        
-                    <h3>
-                        <a href="{{ project.url | relative_url }}">
-                            {{ project.title }}
-                        </a>
-                    </h3>
-        
-                    {{ project.content | strip_html | truncate: 140 }}
-        
-                </div>
+
+                    {% include card-project.html
+                        project=project
+                        content=project.content | strip_html | truncate: 140
+                    %}
         
                 {% endfor %}
         

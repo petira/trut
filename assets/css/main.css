@@ -12,6 +12,8 @@
 
     --container-width: 1200px;
 
+    --nav-height: 70px;
+
     --font-logo: "New Rocker";
 }
 
@@ -415,7 +417,7 @@ ol {
 /* ANCHOR */
 
 section[id] {
-    scroll-margin-top: 70px;
+    scroll-margin-top: var(--nav-height);
 }
 
 /* ==========================================
@@ -442,6 +444,7 @@ section[id] {
         align-items: center;
 
         min-height: 70px;
+        min-height: var(--nav-height);
     }
 
     .nav-toggle {

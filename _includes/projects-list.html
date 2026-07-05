@@ -1,0 +1,33 @@
+{% assign displayed = 0 %}
+
+{% for project in site.projects %}
+
+    {% unless project.published == false %}
+
+        {% include card-project.html project=project %}
+
+        {% assign displayed = displayed | plus: 1 %}
+
+        {% if include.limit and displayed >= include.limit %}
+            {% break %}
+        {% endif %}
+
+    {% endunless %}
+
+{% endfor %}
+
+{% if displayed == 0 %}
+
+<article class="card card-empty">
+
+    <p>
+        {% if include.empty_text %}
+            {{ include.empty_text }}
+        {% else %}
+            Žádné projekty.
+        {% endif %}
+    </p>
+
+</article>
+
+{% endif %}

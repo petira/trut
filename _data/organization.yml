@@ -1,0 +1,45 @@
+name: Trut, z. s.
+short_name: Trut
+
+id: 24614858
+founded: 1. dubna 2026
+registry: L 15408 vedená u Krajského soudu v Hradci Králové
+legal_form: Spolek
+
+motto: Literatura nás baví.
+purpose: >
+  Pořádání kulturních, vzdělávacích a společenských akcí
+  a podpora rozvoje literární kultury v regionu.
+activities:
+  - Pořádá veřejné čtení, autorská setkání, besedy a literární soutěže.
+  - Spolupracuje s knihovnami, muzei, školami, kulturními institucemi a médii.
+  - Vydává a podporuje literární publikace, periodika a propagační materiály.
+
+executive:
+  name: Jiří Kuťák
+  position: Předseda
+
+contact:
+  email: spolek@trut.cz
+  web: https://trut.cz
+
+address:
+  street: Na Struze 30
+  city: Trutnov
+  zip: 541 01
+  country: Česká republika
+
+map:
+  lat: 50.5622539
+  lon: 15.9180419
+
+bank:
+  name: Fio banka, a.s.
+  short_name: Fio banka
+  account: "2103478567/2010"
+  transparent_url: https://ib.fio.cz/ib/transparent?a=2103478567
+
+hero:
+  title: Trut
+  subtitle: Literatura nás baví.
+  button_text: Nejbližší akce

@@ -1,0 +1,13 @@
+<article class="card">
+
+    <h3>
+        <a href="{{ include.project.url | relative_url }}">
+            {{ include.project.title }}
+        </a>
+    </h3>
+
+    <p>
+        {{ include.project.content | strip_html | truncate: 140 }}
+    </p>
+
+</article>

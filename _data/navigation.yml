@@ -1,0 +1,25 @@
+- title: "Domů"
+  home_url: "#domu"
+  page_url: /
+
+- title: Spolek
+  home_url: "#spolek"
+  page_url: "/spolek/"
+
+- title: Činnost
+  home_url: "#cinnost"
+
+- title: Akce
+  home_url: "#akce"
+  page_url: "/akce/"
+
+- title: Projekty
+  home_url: "#projekty"
+  page_url: "/projekty/"
+
+- title: Tým
+  home_url: "#tym"
+
+- title: Kontakt
+  home_url: "#kontakt"
+  page_url: "/kontakt/"

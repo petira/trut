@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {% if page.title %}
+            {{ page.title }} | {{ site.data.organization.name }}
+        {% else %}
+            {{ site.data.organization.name }}
+        {% endif %}
+    </title>
+
+    <meta name="description" content="{{ site.description }}">
+
+    <meta property="og:title" content="{{ site.data.organization.name }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    
+    <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+
+<body>
+
+{% include navigation.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.querySelector(".nav-menu");
+
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menu.classList.remove("open");
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

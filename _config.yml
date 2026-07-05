@@ -1,0 +1,56 @@
+title: Trut, z. s.
+description: Literární spolek z Trutnova pořádající autorská čtení, besedy a kulturní akce.
+lang: cs
+locale: cs_CZ
+timezone: Europe/Prague
+
+# url: "https://trut.cz"
+# baseurl: ""
+permalink: pretty
+
+author:
+  name: Trut
+
+social:
+  name: Trut
+  links:
+    - https://www.facebook.com/trut.cz
+
+logo: /assets/img/logo/trut_logo.svg
+
+formspree:
+  endpoint: https://formspree.io/f/xqevepwd
+
+markdown: kramdown
+
+future: true
+
+collections:
+  events:
+    output: true
+    permalink: /akce/:name/
+  projects:
+    output: true
+    permalink: /projekty/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,35 @@
+<p>
+    <strong>E-mail:</strong><br>
+    <a href="mailto:{{ site.data.organization.contact.email }}">
+        {{ site.data.organization.contact.email }}
+    </a>
+</p>
+
+<p>
+    <strong>Web:</strong><br>
+    <a href="{{ site.data.organization.contact.web }}">
+        {{ site.data.organization.contact.web }}
+    </a>
+</p>
+
+<p>
+    <strong>Název:</strong><br>
+    {{ site.data.organization.name }}
+</p>
+
+<p>
+    <strong>Adresa:</strong><br>
+    {{ site.data.organization.address.street }}<br>
+    {{ site.data.organization.address.zip }}
+    {{ site.data.organization.address.city }}
+</p>
+
+<p>
+    <strong>IČO:</strong><br>
+    {{ site.data.organization.id }}
+</p>
+
+<p>
+    <strong>Spisová značka:</strong><br>
+    {{ site.data.organization.registry }}
+</p>

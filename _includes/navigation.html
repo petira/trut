@@ -1,0 +1,51 @@
+<nav class="main-nav">
+
+    <div class="container">
+
+        <div class="brand">
+            <a href="{{ '/' | relative_url }}">
+                {{ site.data.organization.short_name }}
+            </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Menu">
+            ☰
+        </button>
+
+        <ul class="nav-menu">
+
+            {% for item in site.data.navigation %}
+
+                {% if page.url == "/" %}
+
+                    {% if item.home_url %}
+
+                        <li>
+                            <a href="{{ item.home_url }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+
+                    {% endif %}
+
+                {% else %}
+
+                    {% if item.page_url %}
+
+                        <li>
+                            <a href="{{ item.page_url | relative_url }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</nav>

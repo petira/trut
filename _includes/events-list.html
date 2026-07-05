@@ -1,0 +1,55 @@
+{% assign displayed = 0 %}
+{% assign now_time = site.time | date: "%s" %}
+
+{% assign events = site.events | sort: "date" | reverse %}
+
+{% if include.filter == "future" %}
+    {% assign events = site.events | sort: "date" %}
+{% endif %}
+
+{% for event in events %}
+
+    {% assign event_time = event.date | date: "%s" %}
+    {% assign show = true %}
+
+    {% if include.filter == "future" and event_time < now_time %}
+        {% assign show = false %}
+    {% endif %}
+
+    {% if include.filter == "past" and event_time >= now_time %}
+        {% assign show = false %}
+    {% endif %}
+
+    {% unless event.published == false %}
+
+        {% if show %}
+    
+            {% include card-event.html event=event %}
+    
+            {% assign displayed = displayed | plus: 1 %}
+    
+            {% if include.limit and displayed >= include.limit %}
+                {% break %}
+            {% endif %}
+    
+        {% endif %}
+
+    {% endunless %}
+
+{% endfor %}
+
+{% if displayed == 0 %}
+
+<article class="card card-empty">
+
+    <p>
+        {% if include.empty_text %}
+            {{ include.empty_text }}
+        {% else %}
+            Žádné akce.
+        {% endif %}
+    </p>
+
+</article>
+
+{% endif %}

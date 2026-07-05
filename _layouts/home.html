@@ -1,0 +1,311 @@
+---
+layout: default
+---
+
+<header id="domu" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-logo">
+        
+            {% if site.logo %}
+        
+                <div class="hero-logo-svg">
+                    {% include trut_logo.svg %}
+                </div>
+        
+            {% else %}
+        
+                <span class="hero-logo-text">
+                    {{ site.data.organization.hero.title }}
+                </span>
+        
+            {% endif %}
+        
+        </div>
+
+        <p class="hero-subtitle">
+            {{ site.data.organization.hero.subtitle }}
+        </p>
+
+        <a href="#akce" class="button-primary">
+            {{ site.data.organization.hero.button_text }}
+        </a>
+
+    </div>
+
+</header>
+
+<section id="spolek" class="section">
+
+    <div class="container">
+
+        <h2>Spolek</h2>
+
+        <article class="card card-highlight">
+
+            <p>
+                {{ site.data.organization.purpose }}
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="podpora" class="section">
+
+    <div class="container">
+
+        <h2>Podpořte nás</h2>
+
+        <article class="card">
+
+            <p>
+                Chcete podpořit naši činnost a rozvoj literárních aktivit v Trutnově?
+                Budeme rádi za jakýkoliv finanční příspěvek.
+            </p>
+    
+            <p>
+                Přispět můžete na náš transparentní účet
+                <strong>{{ site.data.organization.bank.account }}</strong>
+                vedený u {{ site.data.organization.bank.short_name }}.
+                Použití prostředků je veřejně dostupné v
+                <a href="{{ site.data.organization.bank.transparent_url }}" target="_blank" rel="noopener">
+                    transparentním bankovnictví</a>.
+            </p>
+    
+            <p>
+                Podpořit nás můžete také prostřednictvím platformy
+                <a href="https://donio.cz/pomozte-noci-literatury-v-trutnove-2026" target="_blank" rel="noopener">
+                    Donio – Pomozte Noci literatury v Trutnově 2026</a>.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="cinnost" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Činnost spolku</h2>
+
+        <article class="cards">
+
+            {% for activity in site.data.organization.activities %}
+
+                <div class="card">
+                    {{ activity }}
+                </div>
+
+            {% endfor %}
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="akce" class="section">
+
+    <div class="container">
+
+        <h2>Akce</h2>
+
+        <p class="section-link">
+            <a href="{{ '/akce/' | relative_url }}">
+                Zobrazit všechny akce →
+            </a>
+        </p>
+
+        <h3>Nejbližší akce</h3>
+
+        {% include events-list.html
+            filter="future"
+            limit=3
+            empty_text="Žádné plánované akce.<br>Sledujte web, brzy nějaké zveřejníme."
+        %}
+
+        <h3 style="margin-top:60px;">
+            Proběhlé akce
+        </h3>
+
+        {% include events-list.html
+            filter="past"
+            limit=3
+            empty_text="Zatím zde nejsou žádné proběhlé akce."
+        %}
+
+    </div>
+
+</section>
+
+
+<section id="projekty" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Projekty</h2>
+
+        <p class="section-link">
+            <a href="{{ '/projekty/' | relative_url }}">
+                Zobrazit všechny projekty →
+            </a>
+        </p>
+
+        <div class="cards">
+
+            {% include projects-list.html
+                limit=3
+                empty_text="Zatím nejsou zveřejněny žádné projekty."
+            %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="tym" class="section">
+
+    <div class="container">
+
+        <h2>Kontaktní osoby</h2>
+
+        <div class="team-grid">
+
+            {% for member in site.data.team %}
+
+            <div class="team-member">
+
+                <img
+                    src="{{ '/assets/img/team/' | append: member.image | relative_url }}"
+                    alt="{{ member.name }}"
+                >
+
+                <h3>{{ member.name }}</h3>
+
+                <p>{{ member.role }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="kontakt" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Kontakt</h2>
+
+        <div class="contact-grid">
+
+            <div>
+
+                <h3>Kontaktní údaje</h3>
+
+                {% include contact.html %}
+
+            </div>
+
+            <div>
+
+                <h3>Napište nám</h3>
+
+                <form
+                    action="{{ site.formspree.endpoint }}"
+                    method="POST"
+                    class="contact-form"
+                >
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Jméno"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="E-mail"
+                        required
+                    >
+
+                    <textarea
+                        name="message"
+                        rows="6"
+                        placeholder="Vaše zpráva"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="button-primary">
+                        Odeslat
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="mapa" class="section section-alt">
+
+    <div class="container">
+
+        <h2>Sídlo</h2>
+
+        <div class="map-wrapper">
+
+            {% assign lat = site.data.organization.map.lat %}
+            {% assign lon = site.data.organization.map.lon %}
+            
+            {% assign min_lat = lat | minus: 0.01 %}
+            {% assign max_lat = lat | plus: 0.01 %}
+            
+            {% assign min_lon = lon | minus: 0.01 %}
+            {% assign max_lon = lon | plus: 0.01 %}
+
+            <iframe
+                width="100%"
+                height="450"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox={{ min_lon }}%2C{{ min_lat }}%2C{{ max_lon }}%2C{{ max_lat }}&layer=mapnik&marker={{ lat }}%2C{{ lon }}">
+            </iframe>
+
+            <p class="map-link">
+                <a
+                    href="https://www.openstreetmap.org/?mlat={{ lat }}&mlon={{ lon }}#map=17/{{ lat }}/{{ lon }}"
+                    target="_blank"
+                >
+                    Otevřít mapu v OpenStreetMap →
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>

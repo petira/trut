@@ -481,6 +481,14 @@ section[id] {
         width: 100%;
     }
 
+    .nav-toggle::before {
+        content: "☰";
+    }
+
+    .nav-toggle.open::before {
+        content: "✕";
+    }
+
 }
 
 /* PAGE CONTENT */

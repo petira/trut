@@ -421,6 +421,14 @@ section[id] {
     color: var(--color-primary);
 }
 
+.nav-toggle::before {
+    content: "☰";
+}
+
+.nav-toggle.open::before {
+    content: "✕";
+}
+
 @media (max-width: 768px) {
 
     .main-nav .container {

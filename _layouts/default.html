@@ -46,17 +46,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!toggle || !menu) return;
 
+    function setMenuState(open) {
+
+        menu.classList.toggle("open", open);
+
+        toggle.classList.toggle("open", open);
+
+        toggle.setAttribute("aria-expanded", open);
+
+        toggle.setAttribute(
+            "aria-label",
+            open ? "Zavřít navigaci" : "Otevřít navigaci"
+        );
+
+    }
+
     toggle.addEventListener("click", () => {
-        menu.classList.toggle("open");
+
+        setMenuState(!menu.classList.contains("open"));
+
     });
 
     menu.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", () => {
 
-            menu.classList.remove("open");
+            setMenuState(false);
 
         });
+
+    });
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            setMenuState(false);
+
+        }
+
+    });
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 768) {
+
+            setMenuState(false);
+
+        }
 
     });
 

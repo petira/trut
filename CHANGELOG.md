@@ -10,8 +10,6 @@ Formát vychází z **Keep a Changelog**.
 
 ### Added
 
-* 
-
 ### Improved
 
 * mobilní navigace

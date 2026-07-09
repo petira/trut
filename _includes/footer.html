@@ -4,13 +4,9 @@
 
         <p>
             &copy; {{ "now" | date: "%Y" }}
-            <a href="{{ '/' | relative_url }}">
-                {{ site.data.organization.name }}
-            </a>,
+            <a href="{{ '/' | relative_url }}">{{ site.data.organization.name }}</a><span>,</span>
             &lt;/&gt;
-            <a href="https://grav.cz/" target="_blank" rel="noopener">
-                Grav.cz
-            </a>
+            <a href="https://grav.cz/" target="_blank" rel="noopener">Grav.cz</a>
         </p>
 
     </div>

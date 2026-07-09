@@ -6,6 +6,20 @@ Formát vychází z **Keep a Changelog**.
 
 ---
 
+## [Unreleased]
+
+### Added
+
+### Improved
+
+* mobilní navigace
+
+### Fixed
+
+* formátování patičky
+
+---
+
 ## [1.0.0] - 2026-07-05
 
 ### Added

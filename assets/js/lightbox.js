@@ -67,7 +67,7 @@ class Lightbox {
 
     bindTriggers() {
 
-        document.querySelectorAll(".lightbox").forEach(element => {
+        document.querySelectorAll("[data-images]").forEach(element => {
 
             element.addEventListener("click", event => {
 
@@ -181,6 +181,211 @@ class Lightbox {
 
 
         return `${this.folder}/${filename}`;
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Show current image
+     * ---------------------------------------------
+     */
+
+    show() {
+
+        this.spinner.classList.add("visible");
+
+        const src = this.imagePath(this.images[this.index]);
+
+        const img = new Image();
+
+        img.onload = () => {
+
+            this.image.src = src;
+
+            this.spinner.classList.remove("visible");
+
+            this.updateCounter();
+
+            this.updateButtons();
+
+            this.preload();
+
+        };
+
+        img.src = src;
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Previous image
+     * ---------------------------------------------
+     */
+
+    previous() {
+
+        if (this.index > 0) {
+
+            this.index--;
+
+        }
+
+        else if (this.loop) {
+
+            this.index = this.images.length - 1;
+
+        }
+
+        else {
+
+            return;
+
+        }
+
+        this.show();
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Next image
+     * ---------------------------------------------
+     */
+
+    next() {
+
+        if (this.index < this.images.length - 1) {
+
+            this.index++;
+
+        }
+
+        else if (this.loop) {
+
+            this.index = 0;
+
+        }
+
+        else {
+
+            return;
+
+        }
+
+        this.show();
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Update counter
+     * ---------------------------------------------
+     */
+
+    updateCounter() {
+
+        this.counter.textContent =
+            `${this.index + 1} / ${this.images.length}`;
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Update navigation buttons
+     * ---------------------------------------------
+     */
+
+    updateButtons() {
+
+        if (this.loop) {
+
+            this.prevButton.hidden = false;
+
+            this.nextButton.hidden = false;
+
+            return;
+
+        }
+
+        this.prevButton.hidden = (this.index === 0);
+
+        this.nextButton.hidden =
+
+            (this.index === this.images.length - 1);
+
+    }
+
+
+
+    /**
+     * ---------------------------------------------
+     * Preload neighbour images
+     * ---------------------------------------------
+     */
+
+    preload() {
+
+        if (this.images.length < 2) {
+
+            return;
+
+        }
+
+        const preload = index => {
+
+            const img = new Image();
+
+            img.src = this.imagePath(this.images[index]);
+
+        };
+
+
+
+        let prev = this.index - 1;
+
+        let next = this.index + 1;
+
+
+
+        if (this.loop) {
+
+            if (prev < 0) {
+
+                prev = this.images.length - 1;
+
+            }
+
+            if (next >= this.images.length) {
+
+                next = 0;
+
+            }
+
+        }
+
+
+
+        if (prev >= 0) {
+
+            preload(prev);
+
+        }
+
+        if (next < this.images.length) {
+
+            preload(next);
+
+        }
 
     }
 

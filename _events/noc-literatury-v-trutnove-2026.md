@@ -8,7 +8,7 @@ Informace se připravují. Naleznete nás na facebookové stránce [**Noc litera
 
 <button
     class="lightbox"
-    data-folder="img"
+    data-folder="noc-literatury-v-trutnove-2026"
     data-loop="true"
     data-images="
         misto_1.jpg,

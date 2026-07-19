@@ -1,3 +1,47 @@
 <link rel="stylesheet" href="{{ '/assets/css/lightbox.css' | relative_url }}">
 
+<div
+    id="lightbox"
+    class="lightbox"
+    aria-hidden="true">
+
+    <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Zavřít galerii">
+        ✕
+    </button>
+
+    <button
+        class="lightbox-prev"
+        type="button"
+        aria-label="Předchozí obrázek">
+        ‹
+    </button>
+
+    <figure class="lightbox-figure">
+
+        <img
+            class="lightbox-image"
+            src=""
+            alt="">
+
+        <figcaption class="lightbox-counter"></figcaption>
+
+    </figure>
+
+    <button
+        class="lightbox-next"
+        type="button"
+        aria-label="Další obrázek">
+        ›
+    </button>
+
+    <div
+        class="lightbox-spinner"
+        aria-hidden="true">
+    </div>
+
+</div>
+
 <script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>

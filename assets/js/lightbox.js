@@ -67,7 +67,7 @@ class Lightbox {
 
     bindTriggers() {
 
-        document.querySelectorAll("[data-images]").forEach(element => {
+        document.querySelectorAll("[.gallery]").forEach(element => {
 
             element.addEventListener("click", event => {
 
@@ -91,16 +91,14 @@ class Lightbox {
 
     open(element) {
 
-        this.folder = element.dataset.folder || "";
+        this.folder = (element.dataset.folder || "").trim();
 
         this.loop = element.dataset.loop !== "false";
 
-
-
-        this.images = element.dataset.images
+        this.images = (element.dataset.images || "")
             .split(",")
             .map(item => item.trim())
-            .filter(item => item.length > 0);
+            .filter(Boolean);
 
 
 
@@ -142,9 +140,11 @@ class Lightbox {
 
         this.overlay.setAttribute("aria-hidden", "true");
 
-
-
         document.body.style.overflow = "";
+
+        this.image.src = "";
+
+        this.image.alt = "";
 
     }
 
@@ -203,6 +203,8 @@ class Lightbox {
         img.onload = () => {
 
             this.image.src = src;
+
+            this.image.alt = "";
 
             this.spinner.classList.remove("visible");
 
@@ -389,4 +391,162 @@ class Lightbox {
 
     }
 
+
+
+    /**
+     * Buttons
+     */
+
+    bindButtons() {
+
+        this.closeButton.addEventListener("click", () => {
+
+            this.close();
+
+        });
+
+        this.prevButton.addEventListener("click", () => {
+
+            this.previous();
+
+        });
+
+        this.nextButton.addEventListener("click", () => {
+
+            this.next();
+
+        });
+
+        this.overlay.addEventListener("click", event => {
+
+            if (event.target === this.overlay) {
+
+                this.close();
+
+            }
+
+        });
+
+    }
+
+
+
+    /**
+     * Keyboard
+     */
+
+    bindKeyboard() {
+
+        document.addEventListener("keydown", event => {
+
+            if (!this.overlay.classList.contains("open")) {
+
+                return;
+
+            }
+
+            switch (event.key) {
+
+                case "Escape":
+
+                    this.close();
+
+                    break;
+
+                case "ArrowLeft":
+
+                    this.previous();
+
+                    break;
+
+                case "ArrowRight":
+
+                    this.next();
+
+                    break;
+
+                case "Home":
+
+                    this.index = 0;
+
+                    this.show();
+
+                    break;
+
+                case "End":
+
+                    this.index = this.images.length - 1;
+
+                    this.show();
+
+                    break;
+
+            }
+
+        });
+
+    }
+
+
+
+    /**
+     * Touch
+     */
+
+    bindTouch() {
+
+        this.overlay.addEventListener("touchstart", event => {
+
+            this.touchStartX = event.changedTouches[0].clientX;
+
+        });
+
+        this.overlay.addEventListener("touchend", event => {
+
+            this.touchEndX = event.changedTouches[0].clientX;
+
+            this.handleSwipe();
+
+        });
+
+    }
+
+
+
+    /**
+     * Swipe
+     */
+
+    handleSwipe() {
+
+        const delta = this.touchEndX - this.touchStartX;
+
+        if (Math.abs(delta) < 50) {
+
+            return;
+
+        }
+
+        if (delta > 0) {
+
+            this.previous();
+
+        }
+
+        else {
+
+            this.next();
+
+        }
+
+    }
+
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    new Lightbox();
+
+});

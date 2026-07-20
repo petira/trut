@@ -1,1 +1,190 @@
-placeholder
+/* ==========================================
+   LIGHTBOX
+========================================== */
+
+.lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .92);
+
+}
+
+.lightbox.open {
+
+    display: flex;
+
+}
+
+.lightbox-figure {
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+}
+
+.lightbox-image {
+
+    display: block;
+
+    max-width: 95vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+}
+
+.lightbox-counter {
+
+    margin-top: 1rem;
+
+    color: white;
+
+    font-size: .95rem;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.lightbox-close,
+
+.lightbox-prev,
+
+.lightbox-next {
+
+    position: absolute;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: background .2s;
+
+}
+
+.lightbox-close:hover,
+
+.lightbox-prev:hover,
+
+.lightbox-next:hover {
+
+    background: rgba(255,255,255,.25);
+
+}
+
+.lightbox-close {
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 2rem;
+
+}
+
+.lightbox-prev {
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 3rem;
+
+}
+
+.lightbox-next {
+
+    right: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 3rem;
+
+}
+
+.lightbox button[hidden] {
+
+    display: none;
+
+}
+
+/* ==========================================
+   SPINNER
+========================================== */
+
+.lightbox-spinner {
+
+    display: none;
+
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    border: 4px solid rgba(255,255,255,.25);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: lightbox-spin .8s linear infinite;
+
+}
+
+.lightbox-spinner.visible {
+
+    display: block;
+
+}
+
+@keyframes lightbox-spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}

@@ -1,6 +1,6 @@
 <button
     type="button"
     class="gallery"
-    data-folder="{{ include.folder }}"
+    data-folder="{{ include.folder | relative_url }}"
     data-images="{{ include.images }}"
     data-loop="{{ include.loop | default: 'true' }}">{{ include.text | default: "📷 Fotogalerie" }}</button>

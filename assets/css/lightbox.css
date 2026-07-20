@@ -1,0 +1,363 @@
+/* ==========================================
+   LIGHTBOX
+========================================== */
+
+.lightbox {
+
+    position: fixed;
+
+    overflow: hidden;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .94);
+
+}
+
+.lightbox.open {
+
+    display: flex;
+
+}
+
+.lightbox-figure {
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+}
+
+.lightbox-image {
+
+    display: block;
+
+    max-width: 95vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    cursor: grab;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+.lightbox-image:active {
+
+    cursor: grabbing;
+
+}
+
+.lightbox-counter {
+
+    margin-top: 1rem;
+
+    color: white;
+
+    font-size: .95rem;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.lightbox-close,
+
+.lightbox-prev,
+
+.lightbox-next {
+
+    position: absolute;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: background .2s;
+
+}
+
+.lightbox-close:hover,
+
+.lightbox-prev:hover,
+
+.lightbox-next:hover {
+
+    background: rgba(255,255,255,.25);
+
+}
+
+.lightbox-close {
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 2rem;
+
+}
+
+.lightbox-prev {
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 3rem;
+
+}
+
+.lightbox-next {
+
+    right: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 3rem;
+
+}
+
+.lightbox button[hidden] {
+
+    display: none;
+
+}
+
+/* ==========================================
+   SPINNER
+========================================== */
+
+.lightbox-spinner {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: 4px solid rgba(255,255,255,.25);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+
+        opacity .2s,
+
+        visibility .2s;
+
+    animation: lightbox-spin .8s linear infinite;
+
+}
+
+.lightbox-spinner.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+@keyframes lightbox-spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.lightbox {
+
+    opacity: 0;
+
+    transition: opacity .25s ease;
+
+}
+
+.lightbox.open {
+
+    opacity: 1;
+
+}
+
+.lightbox-image {
+
+    animation: lightbox-image .25s ease;
+
+}
+
+@keyframes lightbox-image {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.lightbox button:focus-visible {
+
+    outline: 2px solid white;
+
+    outline-offset: 3px;
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lightbox,
+
+    .lightbox-image,
+
+    .lightbox-spinner {
+
+        animation: none;
+
+        transition: none;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .lightbox-image {
+
+        max-width: 100vw;
+
+        max-height: 82vh;
+
+    }
+
+    .lightbox-prev,
+
+    .lightbox-next {
+
+        width: 56px;
+
+        height: 56px;
+
+        font-size: 2.5rem;
+
+    }
+
+    .lightbox-prev {
+
+        left: 6px;
+
+    }
+
+    .lightbox-next {
+
+        right: 6px;
+
+    }
+
+    .lightbox-close {
+
+        top: 8px;
+
+        right: 8px;
+
+    }
+
+    .lightbox-counter {
+
+        margin-top: .75rem;
+
+        font-size: .9rem;
+
+    }
+
+}
+
+/* ==========================================
+   GALLERY BUTTON
+========================================== */
+
+.gallery {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: .5rem;
+
+    margin: .25rem .75rem .25rem 0;
+
+}

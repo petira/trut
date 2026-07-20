@@ -12,11 +12,29 @@ Formát vychází z **Keep a Changelog**.
 
 ### Improved
 
-* mobilní navigace
+### Fixed
+
+---
+
+## [1.0.1] - 2026-07-20
+
+### Added
+
+* univerzální komponenta Lightbox pro zobrazení galerií
+* možnost vložit více galerií na jednu stránku pomocí include
+* podpora ovládání klávesnicí a dotykovými gesty
+
+### Improved
+
+* chování mobilní navigace
+* sjednocen vzhled tlačítek pomocí komponenty `.button`
+* interní cesty používají `relative_url` pro správnou funkci na GitHub Pages i vlastní doméně
 
 ### Fixed
 
+* přepínání ikony mobilní navigace mezi ☰ a ✕
 * formátování patičky
+* opraveno načítání obrázků v galerii při použití `baseurl`
 
 ---
 

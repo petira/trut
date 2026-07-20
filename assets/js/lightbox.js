@@ -67,7 +67,7 @@ class Lightbox {
 
     bindTriggers() {
 
-        document.querySelectorAll("[data-images]").forEach(element => {
+        document.querySelectorAll("[.gallery]").forEach(element => {
 
             element.addEventListener("click", event => {
 
@@ -91,16 +91,14 @@ class Lightbox {
 
     open(element) {
 
-        this.folder = element.dataset.folder || "";
+        this.folder = (element.dataset.folder || "").trim();
 
         this.loop = element.dataset.loop !== "false";
 
-
-
-        this.images = element.dataset.images
+        this.images = (element.dataset.images || "")
             .split(",")
             .map(item => item.trim())
-            .filter(item => item.length > 0);
+            .filter(Boolean);
 
 
 

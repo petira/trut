@@ -173,21 +173,36 @@ ol {
     margin-bottom: 40px;
 }
 
-.button-primary {
-    display: inline-block;
+.button {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
 
     padding: 14px 28px;
+
+    font: inherit;
 
     background: var(--color-accent);
 
     color: white;
 
+    border: none;
+
     border-radius: 8px;
 
-    transition: 0.2s;
+    cursor: pointer;
+
+    transition:
+
+        background .2s,
+
+        transform .2s;
+
 }
 
-.button-primary:hover {
+.button:hover {
     transform: translateY(-2px);
 }
 
@@ -327,11 +342,6 @@ ol {
 
     font-family: inherit;
     font-size: 1rem;
-}
-
-.contact-form button {
-    border: none;
-    cursor: pointer;
 }
 
 /* MAP */

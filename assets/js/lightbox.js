@@ -4,7 +4,7 @@
  * --------------------------------------------------------
  * Universal image gallery for Jekyll websites.
  *
- * Author: ChatGPT & Petr
+ * Author: ChatGPT & Petira
  * Project: TRUT
  * --------------------------------------------------------
  */
@@ -91,6 +91,8 @@ class Lightbox {
 
     open(element) {
 
+        this.lastFocusedElement = element;
+
         this.folder = (element.dataset.folder || "").trim();
 
         this.loop = element.dataset.loop !== "false";
@@ -137,6 +139,12 @@ class Lightbox {
     close() {
 
         this.overlay.classList.remove("open");
+
+        if (this.lastFocusedElement) {
+
+            this.lastFocusedElement.focus();
+
+        }
 
         this.overlay.setAttribute("aria-hidden", "true");
 

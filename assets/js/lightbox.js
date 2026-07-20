@@ -67,7 +67,7 @@ class Lightbox {
 
     bindTriggers() {
 
-        document.querySelectorAll("[.gallery]").forEach(element => {
+        document.querySelectorAll(".gallery").forEach(element => {
 
             element.addEventListener("click", event => {
 

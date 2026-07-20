@@ -142,9 +142,11 @@ class Lightbox {
 
         this.overlay.setAttribute("aria-hidden", "true");
 
-
-
         document.body.style.overflow = "";
+
+        this.image.src = "";
+
+        this.image.alt = "";
 
     }
 
@@ -203,6 +205,8 @@ class Lightbox {
         img.onload = () => {
 
             this.image.src = src;
+
+            this.image.alt = "";
 
             this.spinner.classList.remove("visible");
 

@@ -83,13 +83,15 @@
 
 .teaser-link {
 
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 
 }
 
 .teaser-link a {
 
     color: white;
+
+    text-transform: none;
 
     text-decoration: none;
 

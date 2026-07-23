@@ -1,0 +1,102 @@
+/* ==========================================
+   TEASER
+========================================== */
+
+.teaser {
+
+    background: var(--color-primary);
+
+    color: white;
+
+}
+
+.teaser .container {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3rem;
+
+    padding: 2rem 0;
+
+}
+
+.teaser-date {
+
+    flex: 0 0 auto;
+
+}
+
+.teaser-datetime {
+
+    display: block;
+
+    line-height: 1.1;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-style: normal;
+
+}
+
+.teaser-datetime strong {
+
+    font-weight: 700;
+
+}
+
+.teaser-countdown {
+
+    margin-top: .5rem;
+
+    font-size: 1rem;
+
+    color: var(--color-accent);
+
+}
+
+.teaser-title {
+
+    flex: 1;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+
+}
+
+.blink {
+
+    animation: teaser-blink 1s step-end infinite;
+
+}
+
+@keyframes teaser-blink {
+
+    67% {
+
+        opacity: 0;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .teaser .container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 1.5rem;
+
+    }
+
+}

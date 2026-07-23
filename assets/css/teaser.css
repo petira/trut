@@ -106,17 +106,13 @@
 }
 
 .blink {
-
-    animation: teaser-blink 1s step-end infinite;
-
+    animation: teaser-pulse 1.2s ease-in-out infinite;
 }
 
-@keyframes teaser-blink {
+@keyframes teaser-pulse {
 
-    67% {
-
-        opacity: 0;
-
+    50% {
+        opacity: 0.4;
     }
 
 }

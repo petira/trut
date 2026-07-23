@@ -81,6 +81,26 @@
 
 }
 
+.teaser-link {
+
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    color: white;
+
+    font-size: 1rem;
+
+    text-decoration: none;
+
+}
+
+.teaser-link:hover {
+
+    text-decoration: underline;
+
+}
+
 .blink {
 
     animation: teaser-blink 1s step-end infinite;

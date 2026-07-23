@@ -4,7 +4,7 @@ date: 2026-09-16
 location: "Trutnov"
 ---
 
-**Datum aktualizace: 23. 7. 2026.** Informace jsou pruběžně doplňovány. Aktuální informace naleznete na facebookové stránce [**Noc literatury Trutnov**](https://www.facebook.com/nociliteraturytrutnov).
+**Datum aktualizace: 23. 7. 2026.** Informace jsou průběžně doplňovány. Aktuální informace naleznete na facebookové stránce [**Noc literatury Trutnov**](https://www.facebook.com/nociliteraturytrutnov).
 
 {% include gallery.html
   folder="/assets/img/events/noc-literatury-v-trutnove-2026"

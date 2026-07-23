@@ -31,9 +31,11 @@
 
 .teaser-datetime {
 
-    display: block;
+    display: flex;
 
-    line-height: 1.1;
+    flex-direction: column;
+
+    line-height: 1.05;
 
     font-size: clamp(2rem, 4vw, 3.5rem);
 
@@ -41,9 +43,15 @@
 
 }
 
-.teaser-datetime strong {
+.teaser-date {
 
     font-weight: 700;
+
+}
+
+.teaser-time {
+
+    font-weight: 400;
 
 }
 

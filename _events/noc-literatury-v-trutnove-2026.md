@@ -4,11 +4,11 @@ date: 2026-09-16
 location: "Trutnov"
 ---
 
-Informace se připravují. Naleznete nás na facebookové stránce [**Noc literatury Trutnov**](https://www.facebook.com/nociliteraturytrutnov).
+**Datum aktualizace: 23. 7. 2026.** Informace jsou pruběžně doplňovány. Aktuální informace naleznete na facebookové stránce [**Noc literatury Trutnov**](https://www.facebook.com/nociliteraturytrutnov).
 
 {% include gallery.html
   folder="/assets/img/events/noc-literatury-v-trutnove-2026"
-  images="misto_1.jpg,misto_2.jpg,misto_3.jpg,misto_4.jpg,misto_5.jpg,misto_6.jpg"
+  images="misto_1.jpg,misto_2.jpg,misto_3.jpg,misto_4.jpg,misto_5.jpg,misto_6.jpg,misto_7.jpg,mista.webp"
   text="📷 Čtecí místa"
   loop=true
 %}
@@ -22,5 +22,3 @@ Významnou součástí akce je spolupráce s organizací [**Tichý svět Hradec 
 Na přípravě Noci literatury v Trutnově spolupracujeme také s **velvyslanectvími a kulturními centry různých evropských států**, díky čemuž můžeme návštěvníkům představit pestrý výběr současné evropské literatury a propojit Trutnov s širším evropským kulturním prostředím.
 
 Celkové náklady na realizaci akce činí přibližně **60 000 Kč**. Z této částky je přibližně **30 000 Kč určeno na honoráře účinkujících**, zhruba **20 000 Kč na tlumočení do českého znakového jazyka**, včetně přípravy, dopravy a organizačního zajištění, a přibližně **10 000 Kč na nutnou propagaci akce**.
-
-Získaná podpora bude využita na částečnou úhradu honorářů, tlumočení vybraných čtení do českého znakového jazyka, propagaci akce a další nezbytné organizační náklady.

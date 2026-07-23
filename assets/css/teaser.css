@@ -1,0 +1,134 @@
+/* ==========================================
+   TEASER
+========================================== */
+
+.teaser {
+
+    background: var(--color-primary);
+
+    color: white;
+
+}
+
+.teaser .container {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3rem;
+
+    padding: 2rem 0;
+
+}
+
+.teaser-date {
+
+    flex: 0 0 auto;
+
+}
+
+.teaser-datetime {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-style: normal;
+
+}
+
+.teaser-date {
+
+    font-weight: 700;
+
+}
+
+.teaser-time {
+
+    font-weight: 400;
+
+}
+
+.teaser-countdown {
+
+    margin-top: .5rem;
+
+    font-size: 1rem;
+
+    color: var(--color-accent);
+
+}
+
+.teaser-title {
+
+    flex: 1;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    font-size: clamp(2rem, 3vw, 3rem);
+
+}
+
+.teaser-link {
+
+    margin-top: 0.5rem;
+
+}
+
+.teaser-link a {
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    text-transform: none;
+
+    text-decoration: none;
+
+}
+
+.teaser.hidden {
+
+    display: none;
+
+}
+
+.blink {
+    animation: teaser-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes teaser-pulse {
+
+    50% {
+        opacity: 0.4;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .teaser .container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 1.5rem;
+
+    }
+
+}

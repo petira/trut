@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="{{ '/assets/css/teaser.css' | relative_url }}">
+
+<section class="teaser">
+
+    <div class="container">
+
+        <div class="teaser-date">
+
+            <time
+                class="teaser-datetime blink"
+                datetime="{{ include.date | default: '2026-09-16T17:00' }}"
+                data-duration="{{ include.duration | default: 5 }}">
+
+                <span class="teaser-date">
+                    16. 9. 2026
+                </span>
+
+                <span class="teaser-time">
+                    17–22 hodin
+                </span>
+
+            </time>
+
+            <div class="teaser-countdown"></div>
+
+        </div>
+
+        <div class="teaser-title">
+
+            {{ include.title | default: "Noc literatury v&nbsp;Trutnově" }}
+
+            <p class="teaser-link">
+
+                <a href="{{ include.url | default: '/akce/noc-literatury-v-trutnove-2026/' | relative_url }}">
+
+                    Zobrazit informace →
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ '/assets/js/teaser.js' | relative_url }}"></script>

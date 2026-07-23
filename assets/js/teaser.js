@@ -20,6 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const now = new Date();
 
+    function pluralizeDays(days) {
+
+        if (days === 1) {
+            return "den";
+        }
+
+        if (days >= 2 && days <= 4) {
+            return "dny";
+        }
+
+        return "dní";
+
+    }
+
     if (now >= end) {
 
         teaser.style.display = "none";
@@ -69,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else {
 
         countdown.textContent =
-            `Zbývá ${days} dní`;
+            `Zbývá ${days} ${pluralizeDays(days)}`;
 
     }
 

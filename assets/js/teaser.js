@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (now >= end) {
 
-        teaser.style.display = "none";
+        teaser.classList.add("hidden");
 
         return;
 

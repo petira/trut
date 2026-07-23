@@ -74,16 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
             })}`;
 
     }
-    else if (days === 1) {
-
-        countdown.textContent =
-            "Zbývá 1 den";
-
-    }
     else {
 
         countdown.textContent =
-            `Zbývá ${days} ${pluralizeDays(days)}`;
+            `Začínáme za ${days} ${pluralizeDays(days)}`;
 
     }
 

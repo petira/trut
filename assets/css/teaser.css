@@ -99,12 +99,6 @@
 
 }
 
-.teaser-link a:hover {
-
-    text-decoration: underline;
-
-}
-
 .teaser.hidden {
 
     display: none;

@@ -105,6 +105,12 @@
 
 }
 
+.teaser.hidden {
+
+    display: none;
+
+}
+
 .blink {
 
     animation: teaser-blink 1s step-end infinite;

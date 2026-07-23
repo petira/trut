@@ -83,7 +83,7 @@
 
 .teaser-link {
 
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 
 }
 
@@ -91,30 +91,28 @@
 
     color: white;
 
-    text-decoration: none;
+    font-weight: 600;
 
-    font-size: 1rem;
+    text-transform: none;
+
+    text-decoration: none;
 
 }
 
-.teaser-link a:hover {
+.teaser.hidden {
 
-    text-decoration: underline;
+    display: none;
 
 }
 
 .blink {
-
-    animation: teaser-blink 1s step-end infinite;
-
+    animation: teaser-pulse 1.2s ease-in-out infinite;
 }
 
-@keyframes teaser-blink {
+@keyframes teaser-pulse {
 
-    67% {
-
-        opacity: 0;
-
+    50% {
+        opacity: 0.4;
     }
 
 }

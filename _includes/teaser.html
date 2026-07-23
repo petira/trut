@@ -6,7 +6,8 @@
 
             <time
                 class="teaser-datetime blink"
-                datetime="2026-09-16T17:00">
+                datetime="{{ include.date | default: '2026-09-16T17:00' }}"
+                data-duration="{{ include.duration | default: 5 }}">
 
                 <span class="teaser-date">
                     16. 9. 2026
@@ -24,11 +25,11 @@
 
         <div class="teaser-title">
 
-            Noc literatury v&nbsp;Trutnově
+            {{ include.title | default: "Noc literatury v&nbsp;Trutnově" }}
 
             <p class="teaser-link">
 
-                <a href="{{ '/akce/noc-literatury-v-trutnove-2026/' | relative_url }}">
+                <a href="{{ include.url | default: '/akce/noc-literatury-v-trutnove-2026/' | relative_url }}">
 
                     Zobrazit informace →
 

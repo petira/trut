@@ -10,6 +10,12 @@ Formát vychází z **Keep a Changelog**.
 
 ### Added
 
+* nová komponenta **Teaser** na úvodní stránce pro zvýraznění nejbližší akce
+* responzivní rozložení teaseru pro desktop i mobilní zařízení
+* dynamické zobrazování odpočtu do začátku akce a jejího aktuálního stavu
+* automatické skrytí teaseru po skončení akce
+* parametry `title`, `url`, `date` a `duration` pro snadnou konfiguraci komponenty
+
 ### Improved
 
 ### Fixed
